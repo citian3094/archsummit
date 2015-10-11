@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ArchSummit全球架构师峰会2016北京站</title>
+<link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+<!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body data-spy="scroll" data-offset="60" data-target="#topnavbar" >
+<style type="text/css">
+body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, "\5B8B\4F53" !important; }
+#myDesc, #myCarousel, #myInterview, #mySubject, #myLocation, #myWeibo, #myHost { max-width: 640px; min-height: 568px; margin-top: -32px; padding-top: 32px; }
+#myHost{}
+/*头部导航栏样式*/
+#topnavbar { background-color: black; opacity: 0.8; filter: alpha(opacity=80); max-width:640px; overflow:auto; }
+#topnavbar ul { width:470px; }
+#topnavbar a { font-size: 13px; display:inline-block; float:left; }
+#topnavbar li.active a { border-bottom: 1px solid white; color: white; }
+
+/*Banner*/
+#myBanner { width:100%; padding-bottom:177.5%; background-image: url(http://p1.bqimg.com/567571/24f0dd2b6db713d6.jpg); background-size:contain; }
+
+/*style*/
+.title { color: #fff; line-height: 24px; text-align: center; font-size:20px; }
+.title_img { clear: both; display: block; margin: 0 auto; height:15px; }
+
+/*大会介绍*/
+#myDesc { height: 537px; background-image: url(http://p1.bqimg.com/567571/1e9c0c52b225313f.jpg); background-size:cover; }
+#myDesc .title { margin-top:12px; }
+#myDesc .conDescription { font-size: 14px; line-height: 28px; width: 78%; margin: 32px auto; padding: 16px 12px; color: white; border-radius: 5px; background-color: rgba(0, 0, 0,.7) }
+
+/*出品人*/
+#myCarousel { background-image: url(http://i1.piimg.com/567571/a14e651018a98a7e.jpg); background-size:cover; }
+#myCarousel .title_img { margin-bottom:16px; }
+.carousel-control { font-size: 48px; color: grey; background-image: none!important }
+.media-left img { border-radius: 50%; border: 3px solid rgba(255, 255, 255, 0.0980392); overflow: hidden; width: 56px; height: 56px; }
+.media { margin:0 auto; width:78%; margin-bottom:4px; color: white; font-size: 12px; }
+.media-body { vertical-align: middle; }
+.box-image p:before, .box-image h3:before, .media h2:before, .media h3:before { content: "「 "; color: #00a7ea; margin-right: 2px; }
+.box-image p, .box-image h3, .media h2, .media h3 { text-align: left; color: #00a7ea; }
+.box-image p:after, .box-image h3:after, .media h2:after, .media h3:after { content: " 」"; color: #00a7ea; margin-left: 2px; }
+#myCarousel .media-body h2,#myCarousel .media-body h3 {  font-size:16px; margin:0; margin-top:6px; margin-bottom:8px; }
+#myCarousel .media-body p { padding-left:10px; }
+
+/*采访录*/
+#myInterview { padding-bottom:32px; }
+#myInterview ul { margin:0 auto; margin-top: 20px; width:86%; }
+#myInterview li { line-height: 1.1; }
+#myInterview hr { margin:12px 0; }
+#myInterview ul a { font-size: 16px; }
+#myInterview ul li p { color: #999; font-size: 12px; text-align: right; margin: 8px 0 0 0; }
+#myInterview ul>p { padding-top: 30px; color: #999; font-size: 12px; }
+
+/*精彩议题*/
+#mySubject { height:784px }
+.box { width: 80%; margin: 20px auto; border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; box-shadow: 0 0.125em 0.275em 0 rgba(255,255,255,0.125); position: relative; font-size: 10px; }
+.box p { margin-bottom: 0 }
+.box-image { position:relative; }
+.box-image img { width: 100%; }
+.box-image p { position: absolute; width: 100%; background-color: rgba(0,0,0,.6); overflow: hidden; font-weight: 600!important; }
+.box-big p { font-size: 14px; line-height: 36px; bottom: 0px; height: 36px; }
+.box-small p { font-size: 14px; line-height: 36px; bottom: 0px; height: 36px; }
+.box-content { background-color: #eee; }
+.box-content p { color: #666; font-size: 14px; }
+.box-content .box-author { color: #000; font-weight: normal; padding-top: 10px; }
+.box-desc { padding: 12px 24px; }
+
+/*地址*/
+#myLocation .box-content p { font-size:12px; text-align:center; }
+#myLocation .box-desc { padding-top:4px; }
+#myLocation .box-content { margin-bottom:40px; text-align:center; }
+
+/*主办方*/
+#myHost .or_box { text-align:center; color:#898989; }
+#myHost .or_box .img { width:50%; padding-bottom:50%; height:0; margin:0 auto; background:#fff; border-radius:5px; margin-top:16px; }
+#myHost .or_box .img img { margin-top:32%; }
+
+/*微博*/
+#myWeibo .weibo_box { margin:20px auto; width:80%; }
+
+/*底部导航*/
+#bottomnavbar { background-color: #2c559f; border: none; text-align: center; min-height:initial; }
+#bottomnavbar a { color: #44bce6; font-size: 14px; line-height: 48px; }
+#bottomnavbar a:hover { text-decoration: none; font-weight: 600; }
+#bottomnavbar .spanall { font-weight: 600; }
+#bottomnavbar .spannum { font-size: 16px;}
+
+
+</style>
+<!--导航栏-->
+<div class="navbar navbar-inverse navbar-fixed-top"   id="topnavbar">
+  <div class="container">
+    <ul class="nav navbar-nav" style="margin:0 auto">
+      <li class="active"><a href="#myBanner">首页</a></li>
+      <li ><a href="#myCarousel">出品人</a></li>
+      <li><a href="#myInterview">采访录</a></li>
+      <li><a href="#mySubject">精彩议题</a></li>
+      <li><a href="#myHost">关于我们</a></li>
+      <li class=""><a href="http://www.bagevent.com/event/ticket/159948">立即报名</a></li>
+    </ul>
+  </div>
+</div>
+
+<!--底部报名导航-->
+<div class="navbar navbar-inverse navbar-fixed-bottom" id="bottomnavbar"> <a href="http://www.bagevent.com/event/ticket/159948"> <span class="spanall"> <span class="spannum">8</span>折 </span>&nbsp;限时优惠 < 立即报名 > </a> </div>
+
+<!--banner-->
+<div id="myBanner" ></div>
+<div id="myDesc">
+  <div>
+    <p class="title">实践第一、案例为主</p>
+    <img class="title_img" src="http://i1.piimg.com/567571/a11f471eb44f50ad.png" alt=""> </div>
+  <div class="conDescription">
+    <p>ArchSummit全球架构师峰会是InfoQ中国团队推出的面向高端技术管理者、架构师的技术大会，参会者中超过50%拥有8年以上的工作经验。ArchSummit秉承“实践第一、案例为主”的原则，展示新技术在行业应用中的最新实践，技术在企业转型中的加速作用，帮助企业技术管理者、CTO、架构师做好技术选型、技术团队组建与管理，并确立技术对于产品和业务的关键作用。 </p>
+  </div>
+</div>
+<!--出品人-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-spy="scroll" data-interval="8000">
+  <div>
+    <p class="title">出品人</p>
+    <img class="title_img" src="http://i1.piimg.com/567571/a11f471eb44f50ad.png" alt=""> </div>
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel",data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel",data-slide-to="1"></li>
+    <li data-target="#myCarousel",data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="media">
+        <div class="media-left"><img src="http://p1.bpimg.com/567571/eb9dec896c9a0b9d.jpg" alt=""></div>
+        <div class="media-body">
+          <h2>FinTech</h2>
+          <p> 巨建华&nbsp;&nbsp;|&nbsp;&nbsp;财猫金融 CTO</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left"><img src="http://p1.bpimg.com/567571/32dc73c9e31e8bcd.jpg" alt=""></div>
+        <div class="media-body">
+          <h2>微服务与容器实践</h2>
+          <p> 王福强&nbsp;&nbsp;|&nbsp;&nbsp;独立技术顾问</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left"><img src="http://p1.bpimg.com/567571/ec6d4ad4f3ead9b6.jpg" alt=""></div>
+        <div class="media-body">
+          <h2>社交网络与视频直播</h2>
+          <p> 洪小军&nbsp;&nbsp;|&nbsp;&nbsp;美图架构平台部总监</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left"><img src="http://i1.piimg.com/567571/ab4b91e23ea70240.jpg" alt=""></div>
+        <div class="media-body">
+          <h2>云服务架构探索</h2>
+          <p> 叶航军&nbsp;&nbsp;|&nbsp;&nbsp;小米云技术团队总监</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left"><img src="http://i1.piimg.com/567571/20080d890a64f215.jpg" alt=""></div>
+        <div class="media-body">
+          <h2>架构演进-从0到1再到100</h2>
+          <p> 王晓波&nbsp;&nbsp;|&nbsp;&nbsp;同程首席架构师</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left"><img src="http://i1.piimg.com/567571/d3270aa527986cf9.jpg" alt=""></div>
+        <div class="media-body">
+          <h3>电商专题：系统架构如何应对业务爆发式增长</h3>
+          <p> 张立刚&nbsp;&nbsp;|&nbsp;&nbsp;1号店技术部电商云平台技术总监</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="media">
+        <div class="media-left"><img src="http://p1.bpimg.com/567571/81e237400bbbd463.jpg" alt=""></div>
+        <div class="media-body">
+          <h2>高可用架构之道</h2>
+          <p> 林世洪&nbsp;&nbsp;|&nbsp;&nbsp;京东商城研发部架构师</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left"><img src="http://p1.bpimg.com/567571/a19467ff3cd5938f.jpg" alt=""></div>
+        <div class="media-body">
+          <h2>应用性能管理最佳实践</h2>
+          <p> 唐文&nbsp;&nbsp;|&nbsp;&nbsp;高升控股技术VP</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left"><img src="http://p1.bpimg.com/567571/50ae2a59a6be169b.jpg" alt=""></div>
+        <div class="media-body">
+          <h2>运维创造价值的时代</h2>
+          <p> 赵成（谦益）&nbsp;&nbsp;|&nbsp;&nbsp;蘑菇街运维经理</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left"><img src="http://p1.bpimg.com/567571/0bd8975a4e487f45.jpg" alt=""></div>
+        <div class="media-body">
+          <h2>日新月异的移动架构</h2>
+          <p> 肖恩&nbsp;&nbsp;|&nbsp;&nbsp;阿里巴巴资深专家</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left"><img src="http://p1.bqimg.com/567571/e2f08e9929149924.jpg" alt=""></div>
+        <div class="media-body">
+          <h2>机器学习实战</h2>
+          <p> 李鹏涛&nbsp;&nbsp;|&nbsp;&nbsp;京东研发总监</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left"><img src="http://p1.bpimg.com/567571/35ad6217d64f899b.jpg" alt=""></div>
+        <div class="media-body">
+          <h3>资源共享新模式带来的技术变革</h3>
+          <p> 曹振团&nbsp;&nbsp;|&nbsp;&nbsp;美团外卖技术专家/架构师</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="media">
+        <div class="media-left"><img src="http://p1.bqimg.com/567571/590c5258c03c04b6.png" alt=""></div>
+        <div class="media-body">
+          <h2>研发体系构建管理</h2>
+          <p> 范凯&nbsp;&nbsp;|&nbsp;&nbsp;丁香园CTO</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left"><img src="http://i1.piimg.com/567571/f2a228a1cd7d1cd2.png" alt=""></div>
+        <div class="media-body">
+          <h2>大数据处理及系统架构</h2>
+          <p> 王刚&nbsp;&nbsp;|&nbsp;&nbsp;小米大数据平台总监</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left"><img src="http://i1.piimg.com/567571/fb38f36945769b2a.png" alt=""></div>
+        <div class="media-body">
+          <h2>新闻资讯与广告</h2>
+          <p> 神秘嘉宾&nbsp;&nbsp;|&nbsp;&nbsp;敬请期待</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left"><img src="http://i1.piimg.com/567571/fc54119e0b45b0ad.jpg" alt=""></div>
+        <div class="media-body">
+          <h3>技术人，你真的准备好创业了吗？</h3>
+          <p> 段念&nbsp;&nbsp;|&nbsp;&nbsp;花虾金融CEO</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left"><img src="http://i1.piimg.com/567571/1ee75a20ea1aee33.jpg" alt=""></div>
+        <div class="media-body">
+          <h3>架构师成长之路以及对架构的认知</h3>
+          <p> 崔宝秋 | 小米首席架构师，小米云负责人</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#myCarousel" data-slide="prev" class="carousel-control left" >&lsaquo; </a> <a href="#myCarousel" data-slide="next" class="carousel-control right">&rsaquo;</a> </div>
+
+<!--采访录-->
+<div id="myInterview" style="background-image:url(http://p1.bqimg.com/567571/c4687aa99bfca1e8.jpg)" data-spy="scroll">
+  <div>
+    <p class="title">采访录</p>
+    <img class="title_img" src="http://i1.piimg.com/567571/a11f471eb44f50ad.png" alt=""> </div>
+  <ul class=" list-unstyled">
+    <li> <a href="http://mp.weixin.qq.com/s?__biz=MzI4NzE1NTYyMg==&mid=2651101634&idx=1&sn=f9d262f30fe17d99b6c01253aea57667&scene=1&srcid=0923BtL292SVyOnlcnv8nCYl#wechat_redirect">① 系统化考虑交付效率，掌握技术“手感”</a>
+      <p>——王福强，独立技术顾问</p>
+    </li>
+    <div style="width:100%;margin:0 auto">
+      <hr style="border-top: 1px solid rgba(255, 255,255,0.2)">
+    </div>
+    <li> <a href="http://mp.weixin.qq.com/s?__biz=MzI4NzE1NTYyMg==&mid=2651101773&idx=1&sn=8acf4bfb5c683d720a35a841dc76ed47&chksm=f021ce84c75647929644a2604d8bea99715e98db8b04bd44a3ad6492241a3d7599b4d977ea8f&scene=1&srcid=0923tGoKJGhYYTf1Hqv3TFCm#wechat_redirect">② 技术创业杀出血海，亟需成熟期权制度</a>
+      <p>——段念，花虾金融CEO</p>
+    </li>
+    <div style="width:100%;margin:0 auto">
+      <hr style="border-top: 1px solid rgba(255, 255,255,0.2)">
+    </div>
+    <li> <a href="http://mp.weixin.qq.com/s?__biz=MzI4NzE1NTYyMg==&mid=2651101845&idx=1&sn=348e05cb215c2d183e1f6007405a288b&chksm=f021ce5cc756474aaccc8fdf26345ce6062cc888ee37602e098febb9dc9d6253055bc29eff14&scene=1&srcid=0923cgSvkes3JWw0rJEORTOA#wechat_redirect">③ 挖掘产品生命周期潜藏的商业价值——应用性能管理</a>
+      <p>——唐文，高升控股技术VP</p>
+    </li>
+    <div style="width:100%;margin:0 auto">
+      <hr style="border-top: 1px solid rgba(255, 255,255,0.2)">
+    </div>
+    <li> <a href="http://mp.weixin.qq.com/s?__biz=MzI4NzE1NTYyMg==&mid=2651101869&idx=1&sn=076acb6e8420dab3ea03852b41a72d7f&chksm=f021ce64c7564772fbccf1016b9912cb8570e79e8343c744116f13db3bcf860d8b76593b0c67&scene=1&srcid=0923hK8XGOylZ7HY85S952J9#wechat_redirect">④ 巨头和传统金融战争方始，FinTech还须技术路径破局</a>
+      <p>——巨建华，财猫金融 CTO</p>
+    </li>
+    <div style="width:100%;margin:0 auto">
+      <hr style="border-top: 1px solid rgba(255, 255,255,0.2)">
+    </div>
+    <li> <a href="http://mp.weixin.qq.com/s?__biz=MzI4NzE1NTYyMg==&mid=2651101873&idx=1&sn=27811e5a3d90939cfc060ffb3c4d3220&chksm=f021ce78c756476edb67a6887070081c7d9f54f2923b9ebe79f4f189515ee335210b7c1e7b8c&mpshare=1&scene=1&srcid=0928n4sxLYPRAcULW1VHLgIR#wechat_redirect">⑤ 运维系统须具备五个维度，全面自动化应分步实现</a>
+      <p>——赵成，蘑菇街运维经理</p>
+    </li>
+    <div style="width:100%;margin:0 auto">
+      <hr style="border-top: 1px solid rgba(255, 255,255,0.2)">
+    </div>
+    <li> <a href="http://mp.weixin.qq.com/s?__biz=MzI4NzE1NTYyMg==&mid=2651101917&idx=1&sn=8ee806880e04247c71b07165df36e3b7&chksm=f021ce14c75647026eb0f7895a71a9b55161cf4eed662ebba5a3e0ef487b9bb74cbab201ef02&mpshare=1&scene=1&srcid=0928C8hoWwe5I96ZZUgtkOlc#wechat_redirect">⑥ 运维发展线：先克服难点完成自动化，再连通业务实现技术运营</a>
+      <p>——赵成，蘑菇街运维经理</p>
+    </li>
+    <div style="width:100%;margin:0 auto">
+      <hr style="border-top: 1px solid rgba(255, 255,255,0.2)">
+    </div>
+    <li> <a href="http://mp.weixin.qq.com/s?__biz=MzI4NzE1NTYyMg==&mid=2651101805&idx=1&sn=7eeacfbe67d7e63a4a71454122b6ec10&chksm=f021cea4c75647b27186c3bda37e5e0cf2043f84bb9a5ba204f7086cd8d50a424e5588c149a8&scene=1&srcid=09234QIB5PvuE22SOOncpZO8#wechat_redirect">⑦ 谈创业：为何个人英雄主义时代已经落幕</a>
+      <p>——范凯，丁香园CTO</p>
+    </li>
+    <p style="text-align:center">更多大咖邀请中，敬请常来浏览....</p>
+  </ul>
+</div>
+
+<!--精彩议题-->
+<div id="mySubject" class="carousel slide" data-ride="carousel"  style="background-image:url(http://i1.piimg.com/567571/c6b1e7782b959f7f.png)" data-interval="8000">
+  <div>
+    <p class="title">精彩议题</p>
+    <img class="title_img" src="http://i1.piimg.com/567571/a11f471eb44f50ad.png" alt=""> </div>
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="box">
+        <div class="box-image box-big"> <img src="http://i1.piimg.com/567571/ad28d949c612da07.jpg">
+          <p style="text-align: center;">Go: 微服务架构的基石</p>
+        </div>
+        <div class="box-content">
+          <p class="box-author" style="text-align: center;">by 谢孟军 | Go基金会主席</p>
+          <p class="box-desc" >随着Docker的出现，接着CoreOS的发展，突然Google出来搞了k8s，但是我们发现这些微服务基础设施的背后都采用了同一个语言: Go, 那么为什么这些基础架构会采用Go呢？</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-image box-small"> <img src="http://i1.piimg.com/567571/34df7eba9096f166.jpg">
+          <div>
+            <p style="text-align: center; ">外卖的背后-饿了么基础架构从0到1的演进</p>
+          </div>
+        </div>
+        <div class="box-content">
+          <p class="box-author" style="text-align: center;">by 兰建刚 | 饿了么框架工具部研发总监</p>
+          <p class="box-desc" >这次分享关注的不是饿了么某个基础架构的最终型态，而是和大家一起回顾饿了么基础架构从无到有的过程，回头看看这个过程中，当站在十字路口时我们是怎么思考的。</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="box">
+        <div class="box-image box-big"> <img src="http://i1.piimg.com/567571/149d98ddec8958a0.jpg">
+          <div>
+            <p style="text-align: center;">从草根到优秀架构师的奋斗</p>
+          </div>
+        </div>
+        <div class="box-content">
+          <p class="box-author" style="text-align: center;">by 王晓波 | 同程旅游首席架构师</p>
+          <p class="box-desc" >架构师是永远奋斗在技术战地第一线的技术人，我们通过三个真实故事来看一下架构师应该怎么成长，架构怎样设计才是个好架构，又如何用技术来应对新的挑战。</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-image box-big"> <img src="http://p1.bqimg.com/567571/afda058bdebf04b1.png">
+          <div>
+            <p style="text-align: center;">技术体系构建陷阱</p>
+          </div>
+        </div>
+        <div class="box-content">
+          <p class="box-author" style="text-align: center;">by 余沛 | 艺龙网CTO</p>
+          <p class="box-desc"> 公司业务方向的不同对技术体系构造的影响有哪些？如何在不同资源的情况下对技术体系构建做出合理的评估，以及在公司发展过程中如何发现技术体系构建容易出现的陷阱。</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="box">
+        <div class="box-image box-big"> <img src="http://p1.bqimg.com/567571/0228c4600ecaed67.png">
+          <div>
+            <p style="text-align: center;">HTTPS的性能优化</p>
+          </div>
+        </div>
+        <div class="box-content">
+          <p class="box-author" style="text-align: center;">by 罗成 | 腾讯资深研发工程师</p>
+          <p class="box-desc" >HTTPS能够有效地保护用户隐私、防止内容劫持，是一个非常安全的协议，本次演讲将会为大家深度介绍腾讯内部及腾讯云针对HTTPS性能进行的全方位优化。</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-image box-big"> <img src="http://p1.bqimg.com/567571/659323916bfe29cb.jpg">
+          <div>
+            <p style="text-align: center;">基于视频大数据和人工智能的新天网</p>
+          </div>
+        </div>
+        <div class="box-content">
+          <p class="box-author" style="text-align: center;">by 赵勇 | 格灵深瞳联合创始人</p>
+          <p class="box-desc" >利用海量的数据、先进的深度学习、高性能计算及大数据技术，在产品化的视觉计算处理和数据架构方面进行了相关探索。我们将逐一介绍在视图大数据方面所做的一些工作</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="box">
+        <div class="box-image box-big"> <img src="http://i1.piimg.com/567571/e507c35abbbd167f.png">
+          <div>
+            <p style="text-align: center;">学而优则仕 仕而优则学</p>
+          </div>
+        </div>
+        <div class="box-content">
+          <p class="box-author" style="text-align: center;">by 邹光先 | 爱拍联合创始人&CTO</p>
+          <p class="box-desc" >探讨技术路线和管理路线的选择、初创企业的人才要求、初创企业如何建立研发和管理体系，如何突破业务高速发展所遇到的一些困局，如何通过一系列措施让技术团队走上正轨</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-image box-small"> <img src="http://p1.bpimg.com/567571/9901404c3c8eaaa0.png">
+          <div>
+            <p style="text-align: center;">百度第三代Spider背后万亿级实时数据系统</p>
+          </div>
+        </div>
+        <div class="box-content">
+          <p class="box-author" style="text-align: center;">by 颜世光 | 百度搜索基础架构团队技术负责人</p>
+          <p class="box-desc" >从2014年开始我们对Spider系统进行了大规模重构，构建了每天实时处理几万亿链接与网页更新的百度第三代Spider系统，将新系统的核心流程全部实时化。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#mySubject" data-slide="prev" class="carousel-control left" >&lsaquo; </a> <a href="#mySubject" data-slide="next" class="carousel-control right">&rsaquo;</a> </div>
+
+<!--微博话题-->
+<div id="myWeibo" style="background-color:black">
+  <div>
+    <p class="title">微博话题</p>
+    <img class="title_img" src="http://i1.piimg.com/567571/a11f471eb44f50ad.png" alt="">
+    <div class="weibo_box"> 
+      <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=" type="text/javascript" charset="utf-8"></script>
+      <iframe width="100%" height="500" frameborder="0" scrolling="no"
+				src="http://widget.weibo.com/livestream/listlive.php?language=zh_cn&width=0&height=500&uid=5762953850&skin=1&refer=1&appkey=255012439&pic=0&titlebar=1&border=1&publish=1&atalk=1&recomm=0&at=0&atopic=ArchSummit北京2016&ptopic=ArchSummit北京2016&dpc=1"></iframe>
+    </div>
+  </div>
+</div>
+
+<!--活动主办方-->
+<div id="myHost" style="background-color:black">
+  <div>
+    <p class="title">活动主办方</p>
+    <img class="title_img" src="http://i1.piimg.com/567571/a11f471eb44f50ad.png" alt="">
+    <div class="or_box" >
+      <img style="width:70%;margin-top:8%" src="http://p1.bqimg.com/567571/1cb855d742a7e8d1.png">
+      <div class="or" style="margin-top:20px; margin-bottom:32px;"> 活动由 <span style="color:#00a7ea; font-weight:600;">极客邦   InfoQ</span> 主办 </div>
+      <div class="">
+        <div class="small" style="font-size:12px;">电话联系</div>
+        <div class="nun" style="margin-top:8px;margin-bottom:16px;"><a href="tel:010-89880682" style="color:#00a7ea;">010-89880682</a></div>
+        <div class="small" style="font-size:12px;">邮件联系</div>
+        <div class="nun" style="margin-top:8px;margin-bottom:16px;"><a href="mailto:angel@infoq.com" style="color:#00a7ea;">angel@infoq.com</a></div>
+        <div class="small" style="font-size:12px;">微信</div>
+        <div class="nun" style="margin-top:8px;margin-bottom:16px;"><a href="javascript:void(0)" style="color:#00a7ea;">497788321</a></div>
+        <div class="small" style="font-size:12px;">QQ</div>
+        <div class="nun"><a href="javascript:void(0)" style="color:#00a7ea;">2332883546</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--地图-->
+<div id="myLocation" style="background-color:black">
+  <div>
+    <p class="title">时间地址</p>
+    <img class="title_img" src="http://i1.piimg.com/567571/a11f471eb44f50ad.png" alt=""> </div>
+  <div class="box bigbox" >
+    <div class="box-image box-small"> <img src="http://i1.piimg.com/567571/661a993db9facc87.jpg"> </div>
+    <div class="box-content">
+      <p class="box-author" style="text-align: center;">北京国际会议中心 | 12月2日－3日（周五、周六）</p>
+      <p class="box-desc" >乘地铁到惠新西街北口站下后，再乘753路&696路等公交车亚运村站下车。</p>
+    </div>
+  </div>
+</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    //设置初始垂直居中
+        $(function(){
+            $(".carousel-control").css("line-height",$("#myCarousel").height()+"px");
+
+            //改变大小的时候设置垂直居中，注意window不用引号
+            $(window).resize(function(){
+                $(".carousel-control").css("line-height",$("#myCarousel").height()+"px")
+            });
+
+        })
+    $(function(){
+        var weixinShareLogo = 'http://i1.piimg.com/567571/55909de4b31b001f.jpg';
+        $('body').prepend('<div style=" overflow:hidden; width:0px; height:0; margin:0 auto; position:absolute; top:-800px;"><img src="'+ weixinShareLogo +'"></div>');
+    });
+    </script>
+</html>
