@@ -22,6 +22,7 @@
     <![endif]-->
 </head>
 <body data-spy="scroll" data-offset="60" data-target="#topnavbar" >
+
 <style type="text/css">
 body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, "\5B8B\4F53" !important; }
 #myDesc, #myCarousel, #myInterview, #mySubject, #myLocation, #myWeibo, #myHost { max-width: 640px; min-height: 568px; margin-top: -32px; padding-top: 32px; }
@@ -101,7 +102,11 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 #bottomnavbar .spannum { font-size: 16px;}
 
 
+
 </style>
+<div style='display:none'>
+<img src='http://i1.piimg.com/567571/55909de4b31b001f.jpg' />
+</div>
 <!--导航栏-->
 <div class="navbar navbar-inverse navbar-fixed-top"   id="topnavbar">
   <div class="container">
@@ -479,9 +484,6 @@ $(function(){
   $(".carousel-control").css("line-height",$("#myCarousel").height()+"px");
   //改变大小的时候设置垂直居中，注意window不用引号
   $(window).resize(function(){$(".carousel-control").css("line-height",$("#myCarousel").height()+"px")});
-  var weixinShareLogo = 'http://i1.piimg.com/567571/55909de4b31b001f.jpg';
-  $('body').prepend('<div style=" overflow:hidden; width:0px; height:0; margin:0 auto; position:absolute; top:-800px;"><img src="'+ weixinShareLogo +'"></div>');
-})
 
     </script>
 
