@@ -50,8 +50,11 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 #myCarousel .title_img { margin-bottom:16px; }
 .carousel-control { font-size: 48px; color: grey; background-image: none!important }
 .media-left img { border-radius: 50%; border: 3px solid rgba(255, 255, 255, 0.0980392); overflow: hidden; width: 56px; height: 56px; }
-.media { margin:0 auto; width:85%; margin-bottom:4px; color: white; font-size: 12px; }
-.media-body { vertical-align: middle; }
+.media { margin:0 auto;  margin-bottom:4px; color: white; font-size: 12px; }
+.itempage1 .media{width:80%;}
+.itempage2 .media{width:85%;}
+.itempage3 .media{width:92%;margin:10px auto;}
+.itempage3 .media-left,.media-body{vertical-align:middle;}
 .box-image p:before, .box-image h3:before, .media h2:before, .media h3:before { content: "「 "; color: #00a7ea; margin-right: 2px; }
 .box-image p, .box-image h3, .media h2, .media h3 { text-align: left; color: #00a7ea; }
 .box-image p:after, .box-image h3:after, .media h2:after, .media h3:after { content: " 」"; color: #00a7ea; margin-left: 2px; }
@@ -99,7 +102,7 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 #bottomnavbar a { color: #44bce6; font-size: 14px; line-height: 48px; }
 #bottomnavbar a:hover { text-decoration: none; font-weight: 600; }
 #bottomnavbar .spanall { font-weight: 600; }
-#bottomnavbar .spannum { font-size: 16px;position:relative;top:1px}
+#bottomnavbar .spannum { font-size: 17px;position:relative;top:1px}
 
 /*支付icon*/
 .payicon{
@@ -148,7 +151,7 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
     <li data-target="#myCarousel",data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
-    <div class="item active">
+    <div class="item active itempage1">
       <div class="media">
         <div class="media-left"><img src="http://p1.bpimg.com/567571/eb9dec896c9a0b9d.jpg" alt=""></div>
         <div class="media-body">
@@ -178,21 +181,12 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
         </div>
       </div>
       <div class="media">
-        <div class="media-left"><img src="http://i1.piimg.com/567571/20080d890a64f215.jpg" alt=""></div>
+        <div class="media-left"><img src="http://p1.bqimg.com/567571/590c5258c03c04b6.png" alt=""></div>
         <div class="media-body">
-          <h2>架构演进-从0到1再到100</h2>
-          <p> 王晓波&nbsp;&nbsp;|&nbsp;&nbsp;同程首席架构师</p>
+          <h2>研发体系构建管理</h2>
+          <p> 范凯&nbsp;&nbsp;|&nbsp;&nbsp;丁香园CTO</p>
         </div>
       </div>
-      <div class="media">
-        <div class="media-left"><img src="http://i1.piimg.com/567571/d3270aa527986cf9.jpg" alt=""></div>
-        <div class="media-body">
-          <h3>电商专题：系统架构如何应对业务爆发式增长</h3>
-          <p> 张立刚&nbsp;&nbsp;|&nbsp;&nbsp;1号店技术部电商云平台技术总监</p>
-        </div>
-      </div>
-    </div>
-    <div class="item">
       <div class="media">
         <div class="media-left"><img src="http://p1.bpimg.com/567571/81e237400bbbd463.jpg" alt=""></div>
         <div class="media-body">
@@ -200,13 +194,22 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
           <p> 林世洪&nbsp;&nbsp;|&nbsp;&nbsp;京东商城研发部架构师</p>
         </div>
       </div>
+    </div>
+    <div class="item itempage2">
       <div class="media">
-        <div class="media-left"><img src="http://p1.bpimg.com/567571/a19467ff3cd5938f.jpg" alt=""></div>
+        <div class="media-left"><img src="http://i1.piimg.com/567571/fb38f36945769b2a.png" alt=""></div>
         <div class="media-body">
-          <h2>应用性能管理最佳实践</h2>
-          <p> 唐文&nbsp;&nbsp;|&nbsp;&nbsp;高升控股技术VP</p>
+          <h2>新闻资讯与广告</h2>
+          <p> 神秘嘉宾&nbsp;&nbsp;|&nbsp;&nbsp;敬请期待</p>
         </div>
       </div>
+        <div class="media">
+        <div class="media-left"><img src="http://p1.bqimg.com/567571/e2f08e9929149924.jpg" alt=""></div>
+        <div class="media-body">
+          <h2>机器学习实战</h2>
+          <p> 李鹏涛&nbsp;&nbsp;|&nbsp;&nbsp;京东研发总监</p>
+        </div>
+      </div>    
       <div class="media">
         <div class="media-left"><img src="http://p1.bpimg.com/567571/50ae2a59a6be169b.jpg" alt=""></div>
         <div class="media-body">
@@ -222,29 +225,6 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
         </div>
       </div>
       <div class="media">
-        <div class="media-left"><img src="http://p1.bqimg.com/567571/e2f08e9929149924.jpg" alt=""></div>
-        <div class="media-body">
-          <h2>机器学习实战</h2>
-          <p> 李鹏涛&nbsp;&nbsp;|&nbsp;&nbsp;京东研发总监</p>
-        </div>
-      </div>
-      <div class="media">
-        <div class="media-left"><img src="http://p1.bpimg.com/567571/35ad6217d64f899b.jpg" alt=""></div>
-        <div class="media-body">
-          <h3>资源共享新模式带来的技术变革</h3>
-          <p> 曹振团&nbsp;&nbsp;|&nbsp;&nbsp;美团外卖技术专家/架构师</p>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="media">
-        <div class="media-left"><img src="http://p1.bqimg.com/567571/590c5258c03c04b6.png" alt=""></div>
-        <div class="media-body">
-          <h2>研发体系构建管理</h2>
-          <p> 范凯&nbsp;&nbsp;|&nbsp;&nbsp;丁香园CTO</p>
-        </div>
-      </div>
-      <div class="media">
         <div class="media-left"><img src="http://i1.piimg.com/567571/f2a228a1cd7d1cd2.png" alt=""></div>
         <div class="media-body">
           <h2>大数据处理及系统架构</h2>
@@ -252,12 +232,30 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
         </div>
       </div>
       <div class="media">
-        <div class="media-left"><img src="http://i1.piimg.com/567571/fb38f36945769b2a.png" alt=""></div>
+        <div class="media-left"><img src="http://p1.bpimg.com/567571/a19467ff3cd5938f.jpg" alt=""></div>
         <div class="media-body">
-          <h2>新闻资讯与广告</h2>
-          <p> 神秘嘉宾&nbsp;&nbsp;|&nbsp;&nbsp;敬请期待</p>
+          <h2>应用性能管理最佳实践</h2>
+          <p> 唐文&nbsp;&nbsp;|&nbsp;&nbsp;高升控股技术VP</p>
         </div>
       </div>
+
+    </div>
+    <div class="item itempage3">
+       <div class="media">
+        <div class="media-left"><img src="http://i1.piimg.com/567571/20080d890a64f215.jpg" alt=""></div>
+        <div class="media-body">
+          <h2>架构演进-从0到1再到100</h2>
+          <p> 王晓波&nbsp;&nbsp;|&nbsp;&nbsp;同程首席架构师</p>
+        </div>
+      </div> 
+      <div class="media">
+        <div class="media-left"><img src="http://p1.bpimg.com/567571/35ad6217d64f899b.jpg" alt=""></div>
+        <div class="media-body">
+          <h3>资源共享新模式带来的技术变革</h3>
+          <p> 曹振团&nbsp;&nbsp;|&nbsp;&nbsp;美团外卖技术专家/架构师</p>
+        </div>
+      </div>
+
       <div class="media">
         <div class="media-left"><img src="http://i1.piimg.com/567571/fc54119e0b45b0ad.jpg" alt=""></div>
         <div class="media-body">
@@ -269,7 +267,14 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
         <div class="media-left"><img src="http://i1.piimg.com/567571/1ee75a20ea1aee33.jpg" alt=""></div>
         <div class="media-body">
           <h3>架构师成长之路以及对架构的认知</h3>
-          <p> 崔宝秋 | 小米首席架构师，小米云负责人</p>
+          <p>崔宝秋&nbsp;&nbsp;|&nbsp;小米首席架构师，小米云负责人</p>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-left" style="vertical-align:middle;text-align:center" ><img src="http://i1.piimg.com/567571/d3270aa527986cf9.jpg" alt=""></div>
+        <div class="media-body">
+          <h3>电商专题：系统架构如何应对业务爆发式增长</h3>
+          <p>张立刚&nbsp;|1号店技术部电商云平台技术总监</p>
         </div>
       </div>
     </div>
