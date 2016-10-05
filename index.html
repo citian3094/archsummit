@@ -25,10 +25,7 @@
 
 <style type="text/css">
 body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, "\5B8B\4F53" !important; }
-body.modal-open {
-    overflow: hidden;
-    position: fixed;
-}
+
 #myDesc, #myCarousel, #myInterview, #smallSubject, #myLocation, #myWeibo, #myHost { max-width: 640px; min-height: 568px; margin-top: -32px; padding-top: 32px; }
 #myHost{}
 /*头部导航栏样式*/
@@ -801,20 +798,18 @@ body.modal-open {
       backdrop:"static",
       keyboard:true,
     })
-    // $("body").css({
-    //   "overflow":"hidden"
-    // });
+    $('body').css('overflow','hidden');
+    $('body').css('position','fixed');
 
     $(modal).find(".nav-pills").find("li").eq(0).addClass("active")
     $(modal).find(".tab-content").children().eq(0).addClass("active").addClass("in")
   }
 
   // 点击关闭
-  // $("body").on("click",function(){
-  //     $(document.body).css({
-  //     "overflow":"auto"
-  //   });  
-  // })
+  $("button.close").on("click",function(){
+    $('body').css('overflow','auto');
+    $('body').css('position','static');
+  })
 
 
   // 恢复轮播
