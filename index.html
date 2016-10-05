@@ -797,8 +797,8 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
       backdrop:static,
       keyboard:true,
     })
-    $(document.body).css({
-      "overflow-y":"hidden"
+    $("body").css({
+      "overflow":"hidden"
     });
 
     $(modal).find(".nav-pills").find("li").eq(0).addClass("active")
@@ -806,9 +806,9 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
   }
 
   // 点击关闭
-  $("button.close").on("click",function(){
+  $("body").on("click",function(){
       $(document.body).css({
-      "overflow-y":"auto"
+      "overflow":"auto"
     });  
   })
 
