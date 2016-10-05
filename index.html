@@ -378,7 +378,7 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 </div>
 
 <!--模态框1，出品人栏目点击用-->
-<div class="modal fade myModal" id="myModal0" tabindex="-1" >
+<div class="modal  myModal" id="myModal0" tabindex="-1" >
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" >
@@ -408,7 +408,7 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 </div>
 
 <!--模态框2-->
-<div class="modal fade myModal" id="myModal1" tabindex="-1" >
+<div class="modal  myModal" id="myModal1" tabindex="-1" >
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" >
@@ -759,13 +759,11 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
     $(modal).find(".peopleDesc").html("")
   }
 
-
+  // 记录高度
+  var tmpTop
   function modalClick(num){
     // 停止轮播
-    carouseler(false)
-
-    // 关闭并初始化两个模态框
-   
+    carouseler(false)   
     
     // 填充模态框内容
     if(!array[num]["subjectBelong"]){
@@ -790,7 +788,10 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
     $(modal).find(".peopleDesc").append($('<img src='+array[num]['peopleImg']+'>')).append($("<p><strong>"+array[num]['peopleName']+'</strong></p><p>'+array[num]['peopleTitle']+"</p>")).append($(array[num]['peopleDesc']))
     $(modal).find(".nav-pills").find("li").removeClass("active")
     $(modal).find(".tab-content").children().removeClass("active").removeClass("in")
-   
+    if($("body").scrollTop()!=0){
+      tmpTop=$("body").scrollTop()
+    }
+    
 
     // 显示模态框
     $(modal).modal({
@@ -806,10 +807,12 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
   }
 
   // 点击关闭
-  $("button.close").on("click",function(){
+  $("button.close").each(function(){$(this).on("click",function(){
     $('body').css('overflow','auto');
     $('body').css('position','static');
-  })
+    $("body").scrollTop(tmpTop)
+    })
+  })  
 
 
   // 恢复轮播
