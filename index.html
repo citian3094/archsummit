@@ -119,6 +119,7 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 .myModal .belongtoTopic span{padding:5px 15px;color:#fff;background-color:#428bca;border-radius: 4px}
 .myModal .peopleDesc img{float:left;width:30%;border-radius: 8px;margin:5px 20px 0 0;}
 .myModal .modal-body{padding:0 5px;}
+.modal-content {background-color:#333;color:white}
 
 </style>
 <div style='display:none'>
@@ -378,10 +379,10 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 <!--模态框1，出品人栏目点击用-->
 <div class="modal fade myModal" id="myModal0" tabindex="-1" >
   <div class="modal-dialog">
-    <div class="modal-content" style="background-color:rgba(0,0,0,1);color:white">
+    <div class="modal-content">
       <div class="modal-header" >
         <button class="close" data-dismiss="modal" style="color:white"><span><strong>x</strong></span></button>
-        <h4 class="modal-title">FinTech</h4>
+        <h4 class="modal-title"></h4>
       </div>
       <div class="modal-body">
         <ul class="nav nav-pills">
@@ -408,10 +409,10 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 <!--模态框2-->
 <div class="modal fade myModal"  id="myModal1" tabindex="-1" >
   <div class="modal-dialog">
-    <div class="modal-content" style="background-color:rgba(0,0,0,1);color:white">
+    <div class="modal-content">
       <div class="modal-header" >
         <button class="close" data-dismiss="modal" style="color:white"><span ><strong>x</strong></span></button>
-        <h4 class="modal-title">FinTech</h4>
+        <h4 class="modal-title"></h4>
       </div>
       <div class="modal-body">
         <ul class="nav nav-pills">
@@ -419,21 +420,8 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
           <li><a href="#teacherDesc" data-toggle="tab">讲师介绍</a></li>
         </ul>
         <div class="tab-content">
-          <div class="tab-pane fade in active subjectDesc" id="smallSubjectDesc" >
-            <div>Financial Technology（金融科技）并不是只在国内火热的概念，在国外面向Fin-Tech而生的金融科技公司隐隐有挑战传统金融代表——华尔街的意味，披着互联网外衣的Fin-Tech公司如何利用一系列创新手段使得金融服务变得更有效率，如何引领瓦解传统且不够科技化大型金融企业和体系的趋势，本专题将邀请一线技术大咖为我们一一解答。</div>
-            <div class="belongtoTopic"><span>旗下议题</span></div>
-
-            <ul class="list-unstyled">
-                <li><a href="">系统化考虑交付效率，掌握技术“手感”</a>
-                  <p>——王福强，独立技术顾问</p>
-                </li>
-                <li><a href="">系统化考虑交付效率，掌握技术“手感”</a>
-                  <p>——王福强，独立技术顾问</p>
-                </li>
-              </ul>
-              <p style="text-align:center">更多大咖邀请中，敬请常来浏览！</p>
-          </div>
-          <div class="tab-pane fade peopleDesc" id="teacherDesc">巨建华：财猫金融 CTO，EGO会员，先后毕业于电子科技大学和中国人民大学，曾就职于海虹控股、中国搜索、大麦网和YOKA时尚网等知名IT企业，多年以来一直从事互联网电子商务、搜索和门户网站相关技术研发工作。在工作期间成功构建了目前国内最大票务网站大麦网的全国联网票务系统，部署在数千个场馆节点，支撑了全国70%以上的演出和体育赛事的售票；5年互联网金融软件领域创业经历，主持开发了多款基于上证所Level-2高速行情数据的软件产品；2013年进军医疗行业应用开发，推出基于知识库的ipharmacare智能处方评估系统被应用于100多家大型医院获得了较高的行业知名度；2014年加入火币网后，对火币网的比特币交易系统进行了完全的重构，使之具备了更加高速，稳定和开放的能力，支撑着每天上百亿人民币的撮合交易。</div>
+          <div class="tab-pane fade in active subjectDesc" id="smallSubjectDesc" ></div>
+          <div class="tab-pane fade peopleDesc" id="teacherDesc"></div>
         </div>
       </div>
     </div>
@@ -777,21 +765,27 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
     clearHtml()
     
     // 填充模态框内容
-    
     if(!array[num]["subjectBelong"]){
       var modal="#myModal0"
       var oLi=dict1[array[num]["subjectName"]]
       for (var oNum=0;oNum<oLi.length;oNum++){
           oLi[oNum].appendTo($(modal).find(".belongtoTopic").next())
       }
+      $(modal).find(".belongtoTopic").prev().append(array[num]["subjectDesc"])
+
+      $("#myModal0").find(".belongtoTopic").next().find("li").each(function(){
+        var num=$(this).data("media")
+        $(this).on('click',function(){
+          modalClick(num)
+        })
+      })
     }
     else{
       var modal="#myModal1"
-      // var imgLink=$("#myCarousel").find("div[data-media="+num+"]").find("img").attr("src")    
+      $(modal).find(".subjectDesc").append(array[num]["subjectDesc"])
     }
     
     $(modal).find(".modal-title").html(array[num]["subjectName"])
-    $(modal).find(".belongtoTopic").prev().append(array[num]["subjectDesc"])
     $(modal).find(".peopleDesc").append($('<img src='+array[num]['peopleImg']+'>')).append($("<p><strong>"+array[num]['peopleName']+'</strong></p><p>'+array[num]['peopleTitle']+"</p>")).append($(array[num]['peopleDesc']))
 
 
@@ -801,8 +795,8 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
       backdrop:true,
       keyboard:true,
     })
-    $(".nav-pills").find("li").eq(0).addClass("active")
-    $(".tab-content").children().eq(0).addClass("active").addClass("in")
+    $(modal).find(".nav-pills").find("li").eq(0).addClass("active")
+    $(modal).find(".tab-content").children().eq(0).addClass("active").addClass("in")
   }
 
 
@@ -825,6 +819,8 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
       modalClick(num)
     })
   })
+
+
 </script>
 
 </html>
