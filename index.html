@@ -407,11 +407,11 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 </div>
 
 <!--模态框2-->
-<div class="modal fade myModal"  id="myModal1" tabindex="-1" >
+<div class="modal fade myModal" id="myModal1" tabindex="-1" >
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" >
-        <button class="close" data-dismiss="modal" style="color:white"><span ><strong>x</strong></span></button>
+        <button class="close" data-dismiss="modal" style="color:white"><span><strong>x</strong></span></button>
         <h4 class="modal-title"></h4>
       </div>
       <div class="modal-body">
@@ -420,7 +420,13 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
           <li><a href="#teacherDesc" data-toggle="tab">讲师介绍</a></li>
         </ul>
         <div class="tab-content">
-          <div class="tab-pane fade in active subjectDesc" id="smallSubjectDesc" ></div>
+          <div class="tab-pane fade in active subjectDesc" id="smallSubjectDesc">
+            <div></div>
+            <div class="belongtoTopic" style="display:none"><span>旗下议题</span></div>
+
+            <ul class="list-unstyled" style="display:none"></ul>
+            <p style="text-align:center" style="display:none">更多大咖邀请中，敬请常来浏览！</p>
+          </div>
           <div class="tab-pane fade peopleDesc" id="teacherDesc"></div>
         </div>
       </div>
@@ -681,28 +687,28 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
   ]
 
 
-  // 筛选专题并初始化页面
+  // 分类议题并初始化页面
   var dict1={}
   for(var mNum=0;mNum<array.length;mNum++){
     var subBelong=array[mNum]["subjectBelong"]
     var subName=array[mNum]["subjectName"]
-    // dict1[subName]=[]
+    
     if(!subBelong){
       if (!dict1[subName]){
-        dict1[subName]=[]
-      }
 
-      // 初始化页面
-      var obj=$("<div class='media' data-media="+mNum+"><div class='media-left'><img src="+array[mNum]["peopleImg"]+"></div><div class='media-body'><h3>"+array[mNum]["subjectName"]+"</h3><p>"+array[mNum]["peopleName"]+"  |  "+array[mNum]["peopleTitle"]+"</p></div></div>")
-      
-      if($("#myCarousel .itempage1").children().length<6){
-        obj.appendTo($("#myCarousel .itempage1"))
-      }
-      else if($("#myCarousel .itempage2").children().length<6){
-        obj.appendTo($("#myCarousel .itempage2"))
-      }
-      else{
-        obj.appendTo($("#myCarousel .itempage3"))
+        dict1[subName]=[]
+        // 初始化页面
+        var obj=$("<div class='media' data-media="+mNum+"><div class='media-left'><img src="+array[mNum]["peopleImg"]+"></div><div class='media-body'><h3>"+array[mNum]["subjectName"]+"</h3><p>"+array[mNum]["peopleName"]+"  |  "+array[mNum]["peopleTitle"]+"</p></div></div>")
+        
+        if($("#myCarousel .itempage1").children().length<6){
+          obj.appendTo($("#myCarousel .itempage1"))
+        }
+        else if($("#myCarousel .itempage2").children().length<6){
+          obj.appendTo($("#myCarousel .itempage2"))
+        }
+        else{
+          obj.appendTo($("#myCarousel .itempage3"))
+        }
       }
     }
     else{
@@ -710,8 +716,8 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
         dict1[subBelong]=[]
       }
       else{
-        var obj2=$("<li data-media="+mNum+"><a href='javascript:void(0);'>"+array[mNum]["subjectName"]+"</a><p>——"+array[mNum]["peopleName"]+","+array[mNum]["peopleTitle"]+"</p>")
-        dict1[subBelong].push(obj2)
+        // 分类议题
+        dict1[subBelong].push($("<li data-dismiss='modal' data-media="+mNum+"><a href='javascript:void(0);'>"+array[mNum]["subjectName"]+"</a><p>——"+array[mNum]["peopleName"]+","+array[mNum]["peopleTitle"]+"</p>"))
       }      
     }
   }
@@ -745,11 +751,11 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 
 
   // 模态框函数
-  function clearHtml(){
-    $(".modal-title").html("")
-    $(".belongtoTopic").prev().html("")
-    $(".belongtoTopic").next().html("")
-    $(".peopleDesc").html("")
+  function clearHtml(modal){
+    $(modal).find(".modal-title").html("")
+    $(modal).find(".belongtoTopic").prev().html("")
+    $(modal).find(".belongtoTopic").next().html("")
+    $(modal).find(".peopleDesc").html("")
   }
 
 
@@ -758,36 +764,32 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
     carouseler(false)
 
     // 关闭并初始化两个模态框
-    $(".nav-pills").find("li").removeClass("active")
-    $(".tab-content").children().removeClass("active").removeClass("in")
-    $("#myModal0").modal("hide")
-    $("#myModal1").modal("hide")
-    clearHtml()
+   
     
     // 填充模态框内容
     if(!array[num]["subjectBelong"]){
       var modal="#myModal0"
+      clearHtml(modal)
       var oLi=dict1[array[num]["subjectName"]]
       for (var oNum=0;oNum<oLi.length;oNum++){
-          oLi[oNum].appendTo($(modal).find(".belongtoTopic").next())
-      }
-      $(modal).find(".belongtoTopic").prev().append(array[num]["subjectDesc"])
-
-      $("#myModal0").find(".belongtoTopic").next().find("li").each(function(){
-        var num=$(this).data("media")
-        $(this).on('click',function(){
-          modalClick(num)
+        
+        oLi[oNum].appendTo($(modal).find(".belongtoTopic").next()).on("click",function(){
+          var tmp=$(this).data("media")  
+          setTimeout(function(){modalClick(tmp)},300)
         })
-      })
+      }
     }
     else{
       var modal="#myModal1"
-      $(modal).find(".subjectDesc").append(array[num]["subjectDesc"])
+      clearHtml(modal)
     }
     
+    $(modal).find(".belongtoTopic").prev().append(array[num]["subjectDesc"])
     $(modal).find(".modal-title").html(array[num]["subjectName"])
     $(modal).find(".peopleDesc").append($('<img src='+array[num]['peopleImg']+'>')).append($("<p><strong>"+array[num]['peopleName']+'</strong></p><p>'+array[num]['peopleTitle']+"</p>")).append($(array[num]['peopleDesc']))
-
+    $(modal).find(".nav-pills").find("li").removeClass("active")
+    $(modal).find(".tab-content").children().removeClass("active").removeClass("in")
+   
 
     // 显示模态框
     $(modal).modal({
