@@ -775,7 +775,7 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
         
         oLi[oNum].appendTo($(modal).find(".belongtoTopic").next()).on("click",function(){
           var tmp=$(this).data("media")  
-          setTimeout(function(){modalClick(tmp)},300)
+          setTimeout(function(){modalClick(tmp)},600)
         })
       }
     }
@@ -797,6 +797,10 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
       backdrop:true,
       keyboard:true,
     })
+    // $(document.body).css({
+    //   "overflow-y":"hidden"
+    // });
+
     $(modal).find(".nav-pills").find("li").eq(0).addClass("active")
     $(modal).find(".tab-content").children().eq(0).addClass("active").addClass("in")
   }
