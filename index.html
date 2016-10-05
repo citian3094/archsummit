@@ -85,7 +85,7 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 .box-content { background-color: #eee; }
 .box-content p { color: #666; font-size: 14px; }
 .box-content .box-author { color: #000; font-weight: normal; padding-top: 10px; }
-.box-desc { padding: 6px 24px;width:100%;height:110px; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden; display: -webkit-box;-webkit-line-clamp: 5; -webkit-box-orient: vertical;}
+#smallSubject .box-desc { padding: 6px 24px;width:100%;height:110px; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden; display: -webkit-box;-webkit-line-clamp: 5; -webkit-box-orient: vertical;}
 
 /*地址*/
 #myLocation .box-content p { font-size:12px; text-align:center; }
@@ -339,7 +339,6 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 </body>
 <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="http://cdn.bootcss.com/jQuery.dotdotdot/1.7.4/jquery.dotdotdot.min.js"></script>
 
 <script>
   // 载入数据
@@ -657,12 +656,7 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
     }
   }
 
-  // 省略号
-  $(document).ready(function() {
-    $(".box-desc").each(function(){
-      $(this).dotdotdot()
-    });
-  });
+
 
   //设置轮播图左右箭头垂直居中
   $(".carousel-control").css("line-height",$("#myCarousel").height()+"px");
