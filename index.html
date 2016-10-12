@@ -74,6 +74,14 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 #myInterview ul a { font-size: 16px; }
 #myInterview ul li p { color: #999; font-size: 12px; text-align: right; margin: 8px 0 0 0; }
 #myInterview ul>p { padding-top: 30px; color: #999; font-size: 12px; }
+.displayNone{display:none}
+#showInterview{
+  display:block;
+  margin:30px auto 0 auto ;;
+  padding: 4px 6px;
+  /*background-color:#00a7ea;
+  border-color:#00a7ea;*/
+}
 
 /*精彩议题*/
 #smallSubject { height:784px }
@@ -87,8 +95,8 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 .box-content { background-color: #eee; }
 .box-content p { color: #666; font-size: 14px; }
 .box-content .box-author { color: #000; font-weight: normal; padding-top: 10px; }
-.box-desc{padding: 6px 24px;}
-#smallSubject .box-desc { padding: 6px 24px;width:100%;height:110px; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden; display: -webkit-box;-webkit-line-clamp: 5; -webkit-box-orient: vertical;}
+.box-desc{padding: 6px 10px;}
+#smallSubject .box-desc { padding: 6px 10px;width:100%;height:110px; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden; display: -webkit-box;-webkit-line-clamp: 5; -webkit-box-orient: vertical;}
 
 /*地址*/
 #myLocation .box-content p { font-size:12px; text-align:center; }
@@ -125,6 +133,9 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
 .myModal .modal-body{padding:0 15px;}
 .modal-content {background-color:#333;color:white}
 .outline {font-weight:600;color:#00b9f5}
+.outline_indent{padding-left:10px}
+
+
 
 </style>
 <div style='display:none'>
@@ -182,6 +193,11 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
     <p class="title">采访录</p>
     <img class="title_img" src="http://i1.piimg.com/567571/a11f471eb44f50ad.png" alt=""></div>
   <ul class="list-unstyled">
+    <li> <a href="http://mp.weixin.qq.com/s?__biz=MzI4NzE1NTYyMg==&mid=2651102050&idx=1&sn=ad69d9b55214ccd252e76eb880a7bac1&chksm=f021cfabc75646bd9a19846dcccd0ae1dd86a4bc13db7f6854388b84db17740cc5a15433b5ee&scene=0#wechat_redirect">⑧ 从建设到治理，从系统到团队，谈高可用架构之道</a>
+      <p>——林世洪，京东商城研发部架构师</p>
+    </li>
+    <div style="width:100%;margin:0 auto"><hr style="border-top: 1px solid rgba(255, 255,255,0.2)"></div>
+
     <li> <a href="http://mp.weixin.qq.com/s?__biz=MzI4NzE1NTYyMg==&mid=2651102007&idx=1&sn=ba8856f71d185fed3d6108c79a1a8a9d&chksm=f021cffec75646e86cf4cdda00cf4638314ff804686f7e8a6462026194272d3877e4f62f0949&mpshare=1&scene=1&srcid=1011Y8FWAnGVqNleZkhKZjTp#wechat_redirect">⑦ 移动化浪潮下，谈谈多端优化以及延缓架构腐化</a>
       <p>——肖恩，阿里巴巴资深专家</p>
     </li>
@@ -210,12 +226,16 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
     <li> <a href="http://mp.weixin.qq.com/s?__biz=MzI4NzE1NTYyMg==&mid=2651101773&idx=1&sn=8acf4bfb5c683d720a35a841dc76ed47&chksm=f021ce84c75647929644a2604d8bea99715e98db8b04bd44a3ad6492241a3d7599b4d977ea8f&scene=1&srcid=0923tGoKJGhYYTf1Hqv3TFCm#wechat_redirect">② 技术创业杀出血海，亟需成熟期权制度</a>
       <p>——段念，花虾金融CEO</p>
     </li>
-    <div style="width:100%;margin:0 auto"><hr style="border-top: 1px solid rgba(255, 255,255,0.2)"></div>
+    <div class="displayNone" style="width:100%;margin:0 auto"><hr style="border-top: 1px solid rgba(255, 255,255,0.2)"></div>
 
-    <li> <a href="http://mp.weixin.qq.com/s?__biz=MzI4NzE1NTYyMg==&mid=2651101634&idx=1&sn=f9d262f30fe17d99b6c01253aea57667&scene=1&srcid=0923BtL292SVyOnlcnv8nCYl#wechat_redirect">① 系统化考虑交付效率，掌握技术“手感”</a>
+    <li class="displayNone"> <a href="http://mp.weixin.qq.com/s?__biz=MzI4NzE1NTYyMg==&mid=2651101634&idx=1&sn=f9d262f30fe17d99b6c01253aea57667&scene=1&srcid=0923BtL292SVyOnlcnv8nCYl#wechat_redirect">① 系统化考虑交付效率，掌握技术“手感”</a>
       <p>——王福强，独立技术顾问</p>
     </li>
-    <!--<div style="width:100%;margin:0 auto"><hr style="border-top: 1px solid rgba(255, 255,255,0.2)"></div>-->
+
+
+    <div><button class="btn btn-primary" id="showInterview">显示全部采访</button></div>
+
+
 
     <p style="text-align:center">欢迎点击阅读，更多大咖采访中，敬请常来浏览！</p>
   </ul>
@@ -498,7 +518,19 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
       "peopleDesc":"<p>2012年7月加入1号店，先后担任过1号店订单、库存、拆单、运费、第三方平台订单等电商核心交易系统负责人，致力于电商平台产品化、智能化、云化。</p><p>期间主导并参与了1号店SOA治理、订单Service化、订单水平拆库&去Oracle迁Mysql、无线性能优化及拆pool、运费体系重构、库存准确率优化等重要项目，负责1号店与Tmall、百度、当当、B2B2C平台等第三方平台订单业务，从0开始建立了1号店完善的订单监控、预警、履单体系。</p><p>对高可用高并发高性能的电商核心交易系统及SOA架构有深入的理解和实践，熟悉电商核心产品、订单、库存等业务，将以OMS为核心规划构建新一代电子商务云平台。</p>",
     },
 
+
     // 精彩议题
+    {
+      "subjectBelong":"技术人，你真的准备好创业了吗？",
+      "subjectName":"纯技术创业者的困境",
+      "splendid":true,
+      "splendidUrl":"http://p1.bqimg.com/567571/51c008fe5842e55f.png",
+      "subjectDesc":"<p>作为纯技术背景的工程师、Tech Lead、架构师，在两年多的创业过程中经历了很多（非技术的）问题。资金、团队、运营等各方面的问题都很难用之前的工作经验来解决。风信的团队文化强调“自我驱动、以结果为导向、没人做的事我来做”，如何脱离自己的舒适区，去完成为实现团队梦想所必须完成任务，是现在必须面对的首要问题。本次演讲主要介绍创业过程中所遇到的沟沟坎坎，以及自己的感悟和心得。<p class='outline'>演讲提纲：</p><p>1. 技术人独自创业的问题：</p><p class='outline_indent'>a. 难以寻找运营、产品合伙人；</p><p  class='outline_indent'>b. 不善于和资方打交道；</p><p  class='outline_indent'>c. 销售自己、销售理念、销售产品；</p><p>2. 团队组建和扩大：</p><p  class='outline_indent'>d. 怎么编织梦想 —— to B 业务的整体吸引力弱与互联网行业；</p><p  class='outline_indent'>e. 技术栈不同，产品形态不同，直接匹配的候选人很少；</p><p  class='outline_indent'>f. 平台复杂，学习周期长，需要较高的人员稳定性；</p><p>3. 面向大企业，如何起步做运营：</p><p  class='outline_indent'>g. 规划、开发、发布周期长，试错成本极高，如何快速检验产品构想；</p><p  class='outline_indent'>h. 无品牌和知名度，初创公司怎么切入；</p><p  class='outline_indent'>i. 面对大厂同类产品的压力；</p><p class='outline'>听众受益：</p><p>1. 纯技术背景的听众，在创业前可以对创业有一定的思考和规划；</p><p>2. 已经在创业的技术人，可以对我的经验教训有所借鉴；</p>",
+      "peopleName":"李国鹏",
+      "peopleTitle":"北京风信科技CTO&CEO", 
+      "peopleImg":"http://p1.bpimg.com/567571/56a9d94f63e946a4.jpg",
+      "peopleDesc":"<p>现任北京风信科技有限公司CTO，为企业移动化提供端到端的安全服务。在加入风信前有七年创业公司、六年外企工作经历。最近十年主要从事企业移动邮件、企业移动设备安全接入等工作方向，另外在 OA, HIS, PACS, IM 等传统企业软件上也有丰富的工作经历。</p>",
+    },   
     {
       "subjectBelong":"架构演进—从0到1再到100",
       "subjectName":"QQ高效团队开发实践-开源毫秒服务引擎的设计与实现",
@@ -555,17 +587,6 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
       "peopleDesc":"<p>专注于高并发互联网架构设计、分布式电子商务交易平台设计、大数据分析平台设计、高可用性系统设计。曾设计过多个并发百万以上、每分钟20万以上订单量的电商交易平台，熟悉B2C、B2B、B2B2C、O2O等多种电商形态系统的技术设计，熟悉电子商务平台技术发展特点，拥有十多年丰富的技术架构、技术咨询经验，深刻理解电商系统对技术选择的重要性。</p>",
     },    
     {
-      "subjectBelong":"应用性能管理最佳实践",
-      "subjectName":"HTTPS的性能优化",
-      "splendid":true,
-      "splendidUrl":"http://p1.bqimg.com/567571/0228c4600ecaed67.png",
-      "subjectDesc":"<p>HTTPS能够有效地保护用户隐私，防止内容劫持，是一个非常安全的协议。但是目前依然有70%以上的网站没有部署HTTPS。为什么呢？主要还是存在如下两个严重的性能问题：</p><p>1.HTTPS严重影响用户的访问速度。在未经任何优化的情况下，HTTPS相比HTTP要慢200ms以上，移动端甚至要慢500ms以上；</p><p>2.HTTPS会极大增加服务端的计算成本。HTTPS的完全握手导致服务器处理性能不到HTTP的10%；</p><p>本次演讲将会为大家深度介绍腾讯内部及腾讯云针对HTTPS性能进行的全方位优化：</p><p>1.HTTPS访问速度如何超越HTTP；</p><p>2.如何提升3.5倍的HTTPS完全握手计算性能，节省600%的计算成本；</p><p>3.如何在无秘钥的情况下完成HTTPS的交互，保证腾讯云大客户的私钥安全；</p><p>4.如何优化证书申请及使用成本；</p><p class='outline'>演讲提纲：</p> <p>1.流量劫持介绍；</p> <p>2.HTTPS访问速度优化；</p><p> 3.HTTPS计算性能优化；</p><p>4.无私钥加载方案介绍；</p><p>5.证书流程优化；</p><p class='outline'>听众受益：</p><p>1.了解流量劫持及HTTPS的应用场景；</p><p>2.掌握HTTPS速度优化的常见手段，提升产品的速度体验；</p><p> 3.掌握HTTPS计算性能优化手段，减少服务器计算成本；</p><p> 4.了解无私钥加载技术，提升私钥保管的安全性。</p>",
-      "peopleName":"罗成",
-      "peopleTitle":"腾讯资深研发工程师", 
-      "peopleImg":"http://i1.piimg.com/567571/05ba8d6563edb196.jpg",
-      "peopleDesc":"<p>目前主要负责腾讯stgw(腾讯安全云网关）的相关工作，整体推进腾讯内部及腾讯公有云，混合云的七层负载均衡及全站HTTPS接入。对HTTPS，SPDY，HTTP2，QUIC等应用层协议、高性能服务器技术、云网络技术、用户访问速度、分布式文件传输等有较深的理解。</p>",
-    },  
-    {
       "subjectBelong":"研发体系构建管理",
       "subjectName":"技术体系构建陷阱",
       "splendid":true,
@@ -612,6 +633,17 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
  
 
   // 议题
+    {
+      "subjectBelong":"应用性能管理最佳实践",
+      "subjectName":"HTTPS的性能优化",
+      "splendid":false,
+      "splendidUrl":"http://p1.bqimg.com/567571/0228c4600ecaed67.png",
+      "subjectDesc":"<p>HTTPS能够有效地保护用户隐私，防止内容劫持，是一个非常安全的协议。但是目前依然有70%以上的网站没有部署HTTPS。为什么呢？主要还是存在如下两个严重的性能问题：</p><p>1.HTTPS严重影响用户的访问速度。在未经任何优化的情况下，HTTPS相比HTTP要慢200ms以上，移动端甚至要慢500ms以上；</p><p>2.HTTPS会极大增加服务端的计算成本。HTTPS的完全握手导致服务器处理性能不到HTTP的10%；</p><p>本次演讲将会为大家深度介绍腾讯内部及腾讯云针对HTTPS性能进行的全方位优化：</p><p>1.HTTPS访问速度如何超越HTTP；</p><p>2.如何提升3.5倍的HTTPS完全握手计算性能，节省600%的计算成本；</p><p>3.如何在无秘钥的情况下完成HTTPS的交互，保证腾讯云大客户的私钥安全；</p><p>4.如何优化证书申请及使用成本；</p><p class='outline'>演讲提纲：</p> <p>1.流量劫持介绍；</p> <p>2.HTTPS访问速度优化；</p><p> 3.HTTPS计算性能优化；</p><p>4.无私钥加载方案介绍；</p><p>5.证书流程优化；</p><p class='outline'>听众受益：</p><p>1.了解流量劫持及HTTPS的应用场景；</p><p>2.掌握HTTPS速度优化的常见手段，提升产品的速度体验；</p><p> 3.掌握HTTPS计算性能优化手段，减少服务器计算成本；</p><p> 4.了解无私钥加载技术，提升私钥保管的安全性。</p>",
+      "peopleName":"罗成",
+      "peopleTitle":"腾讯资深研发工程师", 
+      "peopleImg":"http://i1.piimg.com/567571/05ba8d6563edb196.jpg",
+      "peopleDesc":"<p>目前主要负责腾讯stgw(腾讯安全云网关）的相关工作，整体推进腾讯内部及腾讯公有云，混合云的七层负载均衡及全站HTTPS接入。对HTTPS，SPDY，HTTP2，QUIC等应用层协议、高性能服务器技术、云网络技术、用户访问速度、分布式文件传输等有较深的理解。</p>",
+    },  
    {
       "subjectBelong":"研发体系构建管理",
       "subjectName":"学而优则仕 仕而优则学",
@@ -745,6 +777,16 @@ body { font: 18px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans 
   }
   carouseler(true)
 
+  // 显示剩余议题
+  $("#showInterview").on("click",function(){
+    var $this=$(this)
+    $(".displayNone").each(function(){
+      $(this).css("display","block")
+      $this.css("display","none")
+    })
+    
+    
+  })
 
   // 模态框函数
   function clearHtml(modal){
